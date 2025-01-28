@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pizza Shop</title>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/dist/css/style.css">
+</head>
+
+<body>
+    <div class="d-flex w-100" style="min-height: 100vh;">
+        <div class="h-100 w-50 hero-image-section">
+            <div class="w-100 custom-image">
+                <img src="./assets/images/dominos_background.jpg" class="img-fluid h-100 w-100 object-fit-cover" alt="">
+            </div>
+        </div>
+        <div class="w-50 custom-form-section">
+            <div class="h-100 w-100 align-middle d-flex flex-column justify-content-center align-items-start">
+                <div class="w-100 company-logo d-flex justify-content-center">
+                    <img src="./assets/images/logos/pizzashop_logo.png" class="img-fluid w-25" alt="">
+                    <div class="h-100 company-name">
+                        <p>&nbsp;PIZZASHOP</p>
+                    </div>
+                </div>
+                <div class="heading">
+                    <h1 class="display-6">Welcome.</h1>
+                </div>
+                <form action="" class="w-100" id="loginForm">
+                    <div class="inputFiedContainer">
+                        <div class="input-group custom-field bg-white border-0">
+                            <input class="form-control bg-white border-0" id="username" name="username"
+                                placeholder="Username" value="" required>
+                            <span class="input-group-text bg-white border-0">
+                                <img src="./assets/images/user-solid.svg" alt="">
+                            </span>
+                        </div>
+                        <span class="invalidUsernameMsg text-danger"></span>
+                    </div>
+                    <div class="inputFiedContainer">
+                        <div class="input-group custom-field bg-white border-0">
+                            <input class="form-control bg-white border-0" id="password" name="password" type="password"
+                                placeholder="Password" value="" required>
+                            <span class="input-group-text bg-white border-0" id="togglePassword">
+                                <img class="normal-icon eye-img" src="./assets/images/eye-slash-solid.svg" alt=""
+                                    style="cursor: pointer;">
+                                <img class="active-icon eye-img" src="./assets/images/eye-solid.svg" alt=""
+                                    style="cursor: pointer; display: none;">
+                            </span>
+                        </div>
+                        <span class="invalidPasswordMsg text-danger"></span>
+                    </div>
+                    <div class="form-check d-flex justify-content-between w-100 mb-3">
+                        <div>
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                        </div>
+                        <div>
+                            <a href="./forgot-password.html" class="text-decoration-none text-blue">Forgot Password?</a>
+                        </div>
+                    </div>
+                    <div class="submit-btn w-100">
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/dist/js/custom.js"></script>
+</body>
+
+</html>

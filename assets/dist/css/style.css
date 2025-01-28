@@ -1,0 +1,133 @@
+/* LOGINPAGE HERO IMAGE */
+.custom-image {
+    height: 100vh;
+}
+.company-name {
+    text-align: center;
+    padding-top: 1.25vw;
+    font-size: 3vw;
+    font-weight: 500;
+    color: #0066b2;
+}
+
+/* LoginPage form section  */
+.custom-form-section {
+    height: 100vh;
+    padding: 0vw 8vw 0vw 8vw;
+    background-color: #E1EBEE;
+}
+
+.custom-form-section .heading {
+    padding: 2vw 0vw 0.5vw 0vw;
+}
+
+.custom-field img {
+    width: 1vw;
+}
+
+.custom-field .eye-img {
+    width: 1.25vw;
+}
+
+.custom-field {
+    border-radius: 10px;
+    padding: 0.2vw;
+    width: 100%;
+}
+
+.inputFiedContainer{
+    padding-bottom: 2vw !important;
+}
+
+.custom-field input {
+    font-size: 1.25vw;
+}
+
+.custom-field input:focus,
+.form-check-input:focus {
+    box-shadow: none;
+    border: 0cap;
+}
+
+.submit-btn button {
+    width: 100% !important;
+    margin-top: 1vw;
+    padding: 0.5vw;
+}
+
+
+@media screen and (max-width:991px) {
+    .hero-image-section {
+        display: none;
+    }
+
+    .company-name {
+        text-align: center;
+        padding-top: 4.75vw;
+        font-size: 5vw;
+        font-weight: 500;
+        color: #0066b2;
+    }
+    
+
+    .custom-form-section {
+        width: 100% !important;
+        overflow: auto;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .custom-form-section::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        display: block;
+        background-image: url(/assets/images/dominos_background.jpg);
+        background-size:cover;
+        width: 100%;
+        height: 100%;
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+    }
+
+    .custom-form-section .heading {
+        padding: 2rem 0rem 0.5rem 0rem;
+        color: #E1EBEE;
+    }
+
+    .custom-field img {
+        width: 1rem;
+    }
+
+    .custom-field .eye-img {
+        width: 1.25rem;
+    }
+
+    .custom-field {
+        border-radius: 10px;
+        padding: 0.2rem;
+        width: 100%;
+        margin-bottom: 2rem !important;
+    }
+
+    .custom-field input {
+        font-size: 1.25rem;
+        color: #000000;
+    }
+
+    .form-check, .form-check a{
+        color: #E1EBEE;
+    }
+
+    .submit-btn button {
+        width: 100% !important;
+        margin-top: 1rem;
+        padding: 0.5rem;
+    }
+}
