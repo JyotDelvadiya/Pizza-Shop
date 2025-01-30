@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+
+    <!-- All Features of table  -->
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+    </style>
+    <script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script> -->
+    <!-- End table features links -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/dist/css/dashboard.css">
+</head>
+
+<body onload="toggleMenuForBigScreen()">
+    <div class="container-fluid m-0 p-0">
+        <div class="row m-0">
+            <div class="col-auto sidebar sticky-top text-center p-0">
+                <div class="offcanvas offcanvas-start" style="width: 250px; z-index: 999;" data-bs-scroll="true"
+                    data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling"
+                    aria-labelledby="offcanvasScrollingLabel">
+                    <div class="offcanvas-header pl-3 py-1">
+                        <div class="offcanvas-title customLogo pt-1 d-flex w-75 " id="offcanvasWithBothOptionsLabel">
+                            <img src="./assets/images/logos/pizzashop_logo.png" class="w-50 object-fit-cover" alt="">
+                            <p class="logoName">PIZZASHOP</p>
+                        </div>
+                    </div>
+                    <div class="offcanvas-body px-0">
+                        <ul class="nav flex-column bg-white">
+                            <!-- Dashboard -->
+                            <li class="nav-item">
+                                <a class="nav-link c-side d-flex align-items-center gap-2" aria-current="page"
+                                    href="./dashboard.html">
+                                    <!-- <img class="normal-icon" src="./assets/images/dashboard-default.svg"
+                                        alt="Dashboard Icon" style="max-height: 20px; display: none;">
+                                    <img class="active-icon" src="./assets/images/dashboard-active.svg"
+                                        alt="Dashboard Active Icon" style="max-height: 20px;"> -->
+                                    Dashboard
+                                </a>
+                            </li>
+                            <!-- Analysis -->
+                            <li class="nav-item">
+                                <a class="nav-link c-side d-flex align-items-center gap-2 " href="./Users.html">
+                                    <!-- <img class="normal-icon" src="./assets/images/graph-default.svg" alt="Analysis Icon"
+                                        style="max-height: 20px;">
+                                    <img class="active-icon" src="./assets/images/graph-active.svg"
+                                        alt="Analysis Active Icon" style="max-height: 20px; display: none;"> -->
+                                    Users
+                                </a>
+                            </li>
+                            <!-- Inbox -->
+                            <li class="nav-item">
+                                <a class="nav-link c-side d-flex align-items-center gap-2" href="./roles.html">
+                                    <!-- <img class="normal-icon" src="./assets/images/inbox-default.svg" alt="Inbox Icon"
+                                        style="max-height: 20px;">
+                                    <img class="active-icon" src="./assets/images/inbox-active.svg"
+                                        alt="Inbox Active Icon" style="max-height: 20px; display: none;"> -->
+                                    Roles and Permissions
+                                </a>
+                            </li>
+                            <!-- History -->
+                            <li class="nav-item">
+                                <a class="nav-link c-side d-flex align-items-center gap-2 active" href="#">
+                                    <!-- <img class="normal-icon" src="./assets/images/clock-default.svg" alt="History Icon"
+                                        style="max-height: 20px;">
+                                    <img class="active-icon" src="./assets/images/clock-active.svg"
+                                        alt="History Active Icon" style="max-height: 20px; display: none;"> -->
+                                    Menu
+                                </a>
+                            </li>
+                            <!-- Users -->
+                            <li class="nav-item">
+                                <a class="nav-link c-side d-flex align-items-center gap-2" href="#">
+                                    <!-- <img class="normal-icon" src="./assets/images/user-default.svg" alt="Users Icon"
+                                        style="max-height: 20px;">
+                                    <img class="active-icon" src="./assets/images/user-active.svg"
+                                        alt="Users Active Icon" style="max-height: 20px; display: none;"> -->
+                                    Table and section
+                                </a>
+                            </li>
+                            <!-- Maintenance -->
+                            <li class="nav-item">
+                                <a class="nav-link c-side d-flex align-items-center gap-2" href="#">
+                                    <!-- <img class="normal-icon" src="./assets/images/maintenance-default.svg"
+                                        alt="Maintenance Icon" style="max-height: 20px;">
+                                    <img class="active-icon" src="./assets/images/maintenance-active.svg"
+                                        alt="Maintenance Active Icon" style="max-height: 20px; display: none;"> -->
+                                    Taxes and Fees
+                                </a>
+                            </li>
+                            <!-- Setting -->
+                            <li class="nav-item">
+                                <a class="nav-link c-side d-flex align-items-center gap-2" href="#">
+                                    <!-- <img class="normal-icon" src="./assets/images/setting-default.svg"
+                                        alt="Setting Icon" style="max-height: 20px;">
+                                    <img class="active-icon" src="./assets/images/setting-active.svg"
+                                        alt="Setting Active Icon" style="max-height: 20px; display: none;"> -->
+                                    Orders
+                                </a>
+                            </li>
+                            <!-- Setting -->
+                            <li class="nav-item">
+                                <a class="nav-link c-side d-flex align-items-center gap-2" href="#">
+                                    <!-- <img class="normal-icon" src="./assets/images/setting-default.svg"
+                                        alt="Setting Icon" style="max-height: 20px;">
+                                    <img class="active-icon" src="./assets/images/setting-active.svg"
+                                        alt="Setting Active Icon" style="max-height: 20px; display: none;"> -->
+                                    Customers
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col p-0 w-100">
+                <div class="header d-flex flex-row sticky-top w-100">
+                    <button
+                        class="btn toggle p-0 d-flex flex-row align-items-center justify-content-start px-3 text-white "
+                        type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                        aria-controls="offcanvasScrolling" onclick="toggleMenu()"><i class="bi bi-list"
+                            id="menu-toggle"></i></button>
+                    <div class="d-flex flex-row align-items-center justify-content-end w-100">
+                        <img src="./assets/images/Default_pfp.svg.png" class="userProfileImage" alt="">
+                    </div>
+                </div>
+                <div class="menuContent py-3 px-md-5 px-sm-1 display-6">
+                    <div class="d-flex flex-row justify-content-between">
+                        <div class="d-flex flex-row gap-2">
+                            <div class="d-flex-inline pageTitle">Menu</div>
+                        </div>
+                    </div>
+                    <div class="menuContainer bg-white my-3 shadow">
+                        <div class="d-flex itemsAndModifiersBtns mb-3 px-3">
+                            <div class="itemsBtn d-flex-inline align-items-center gap-2 active px-3">
+                                <img src="./assets/images/icons/order-value.svg" style="width: 20px;" alt="">
+                                Items
+                            </div>
+                            <div class="itemsBtn d-flex-inline align-items-center gap-2 px-3">
+                                <img src="./assets/images/icons/icons8-four-squares-96.png" style="width: 20px;" alt="">
+                                Modifiers
+                            </div>
+                        </div>
+                        <div class="container-fluid m-0 p-0">
+                            <div class="row m-0">
+                                <div class="col-auto cateoriesSidebar sticky-top text-center p-0">
+                                    <div class="categoriesContainer bg-gray p-3">
+
+                                        <!-- CATEGAROIES HEADER -->
+                                        <div class="d-flex flex-row align-items-center justify-content-between w-100">
+                                            <div class="d-flex-inline categoriesTitle">Categories</div>
+                                            <div class="d-flex flex-row gap-2">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center flex-row gap-2">
+                                                    <img src="./assets/images/icons/plus-solid.svg"
+                                                        class="addCategoryBtn" style="height: 35px; width: 35px;" alt=""
+                                                        data-bs-toggle="modal" data-bs-target="#logoutModal">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- CATEGORY LIST -->
+                                        <div class="px-0">
+                                            <ul class="categories nav nav-pills" id="pills-tab" role="tablist">
+                                                <li class="nav-item category" role="presentation">
+                                                    <a href="#" class="nav-link active d-flex align-items-center gap-2"
+                                                        id="pills-sandwich-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#pills-sandwich" type="button" role="tab"
+                                                        aria-controls="pills-sandwich" aria-selected="true">
+                                                        <img src="./assets/images/icons/braillesixdots_99639.png"
+                                                            class="smallIcon" alt="">
+                                                        <div class="categoryName">Sandwich</div>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item category" role="presentation">
+                                                    <a href="#" class="nav-link d-flex align-items-center gap-2"
+                                                        id="pills-pasta-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#pills-pasta" type="button" role="tab"
+                                                        aria-controls="pills-pasta" aria-selected="true">
+                                                        <img src="./assets/images/icons/braillesixdots_99639.png"
+                                                            class="smallIcon" alt="">
+                                                        <div class="categoryName">Pasta</div>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item category" role="presentation">
+                                                    <a href="#" class="nav-link d-flex align-items-center gap-2"
+                                                        id="pills-salad-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#pills-salad" type="button" role="tab"
+                                                        aria-controls="pills-salad" aria-selected="true">
+                                                        <img src="./assets/images/icons/braillesixdots_99639.png"
+                                                            class="smallIcon" alt="">
+                                                        <div class="categoryName">Salads</div>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item category" role="presentation">
+                                                    <a href="#" class="nav-link d-flex align-items-center gap-2"
+                                                        id="pills-pizza-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#pills-pizza" type="button" role="tab"
+                                                        aria-controls="pills-pizza" aria-selected="true">
+                                                        <img src="./assets/images/icons/braillesixdots_99639.png"
+                                                            class="smallIcon" alt="">
+                                                        <div class="categoryName">Pizza</div>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item category" role="presentation">
+                                                    <a href="#" class="nav-link d-flex align-items-center gap-2"
+                                                        id="pills-dessert-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#pills-dessert" type="button" role="tab"
+                                                        aria-controls="pills-dessert" aria-selected="true">
+                                                        <img src="./assets/images/icons/braillesixdots_99639.png"
+                                                            class="smallIcon" alt="">
+                                                        <div class="categoryName">Desserts</div>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item category" role="presentation">
+                                                    <a href="#" class="nav-link d-flex align-items-center gap-2"
+                                                        id="pills-burger-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#pills-burger" type="button" role="tab"
+                                                        aria-controls="pills-burger" aria-selected="true">
+                                                        <img src="./assets/images/icons/braillesixdots_99639.png"
+                                                            class="smallIcon" alt="">
+                                                        <div class="categoryName">Burger</div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col px-3 right-container w-100">
+                                    <div class="itemsHeader d-flex flex-column sticky-top w-100">
+
+                                        <!-- ITEMS LIST HEADER -->
+                                        <div class="d-flex flex-row align-items-center justify-content-between w-100">
+                                            <div class="d-flex-inline itemsTitle">Items</div>
+
+                                            <div class="d-flex flex-row gap-2 ">
+                                                <div class="d-flex flex-row gap-2 itemsSearchBar">
+                                                    <input type="text" class="form-control" placeholder="Search">
+                                                    <img src="./assets/images/icons/magnifying-glass-solid.svg"
+                                                        class="searchIcon" alt="">
+                                                </div>
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center flex-row gap-2 itemsDeleteBar">
+                                                    <img src="./assets/images/icons/trash-solid.svg" class="dustbinIcon"
+                                                        alt="">
+                                                </div>
+                                                <a href="./addItem.html" class="w-50 addUserBlock">
+                                                    <div
+                                                        class="d-flex flex-row justify-content-center align-items-center gap-2 addUser w-100 h-100">
+                                                        <img src="./assets/images/icons/plus-solid.svg"
+                                                            class="addUserIcon object-fit-cover p-0" alt="">
+                                                        <button class="addUserBtn d-flex justify-content-center p-0">Add
+                                                            Item</button>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-content" id="pills-tabContent">
+                                            <!-- ITEMS LIST TABLE -->
+                                            <div class="tab-pane fade show active itemsTable" id="pills-sandwich"
+                                                role="tabpanel" aria-labelledby="pills-sandwich-tab" tabindex="0">
+                                                <table id="myTable" class="table">
+                                                    <thead class="text-center ">
+                                                        <tr>
+                                                            <th scope="col"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="defaultCheck1">
+                                                                Name
+                                                            </th>
+                                                            <th scope="col">Item Type</th>
+                                                            <th scope="col">Rate</th>
+                                                            <th scope="col">Quantity</th>
+                                                            <th scope="col">Available</th>
+                                                            <th scope="col">Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="text-center">
+                                                        <tr>
+                                                            <th scope="row"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="defaultCheck2">
+                                                                <img src="./assets/images/dining-menu.png"
+                                                                    style="width: 25px;" alt="">
+                                                                Ham and cheese
+                                                            </th>
+                                                            <td class="">
+                                                                <img src="./assets/images/icons/non-veg-icon.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                            <td>$ 26</td>
+                                                            <td>14</td>
+                                                            <td>
+                                                                <div class="form-check form-switch">
+                                                                    <input
+                                                                        class="form-check-input flexSwitchCheckDefault"
+                                                                        type="checkbox" role="switch" id="">
+                                                                </div>
+                                                            </td>
+                                                            <td
+                                                                class="d-flex justify-content-center gap-2 align-items-center">
+                                                                <a href="./editItem.html">
+                                                                    <img src="./assets/images/icons/pen-to-square-solid.svg"
+                                                                        style="width: 18px;" class="editUserIcon"
+                                                                        alt="">
+                                                                </a>
+                                                                <img src="./assets/images/icons/trash-solid.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="defaultCheck3">
+                                                                <img src="./assets/images/dining-menu.png"
+                                                                    style="width: 25px;" alt="">
+                                                                Ham and egg bun
+                                                            </th>
+                                                            <td>
+                                                                <img src="./assets/images/icons/non-veg-icon.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                            <td>$ 32</td>
+                                                            <td>9</td>
+                                                            <td>
+                                                                <div class="form-check form-switch">
+                                                                    <input
+                                                                        class="form-check-input flexSwitchCheckDefault"
+                                                                        type="checkbox" role="switch" id="">
+                                                                </div>
+                                                            </td>
+                                                            <td
+                                                                class="d-flex justify-content-center gap-2 align-items-center">
+                                                                <a href="./editItem.html">
+                                                                    <img src="./assets/images/icons/pen-to-square-solid.svg"
+                                                                        style="width: 18px;" class="editUserIcon"
+                                                                        alt="">
+                                                                </a>
+                                                                <img src="./assets/images/icons/trash-solid.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="defaultCheck4">
+                                                                <img src="./assets/images/dining-menu.png"
+                                                                    style="width: 25px;" alt="">
+                                                                Baked bean
+                                                            </th>
+                                                            <td>
+                                                                <img src="./assets/images/icons/veg-icon.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                            <td>$ 18</td>
+                                                            <td>2</td>
+                                                            <td>
+                                                                <div class="form-check form-switch">
+                                                                    <input
+                                                                        class="form-check-input flexSwitchCheckDefault"
+                                                                        type="checkbox" role="switch" id="">
+                                                                </div>
+                                                            </td>
+                                                            <td
+                                                                class="d-flex justify-content-center gap-2 align-items-center">
+                                                                <a href="./editItem.html">
+                                                                    <img src="./assets/images/icons/pen-to-square-solid.svg"
+                                                                        style="width: 18px;" class="editUserIcon"
+                                                                        alt="">
+                                                                </a>
+                                                                <img src="./assets/images/icons/trash-solid.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="defaultCheck5">
+                                                                <img src="./assets/images/dining-menu.png"
+                                                                    style="width: 25px;" alt="">
+                                                                Croque-monsieur
+                                                            </th>
+                                                            <td>
+                                                                <img src="./assets/images/icons/veg-icon.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                            <td>$ 39</td>
+                                                            <td>6</td>
+                                                            <td>
+                                                                <div class="form-check form-switch">
+                                                                    <input
+                                                                        class="form-check-input flexSwitchCheckDefault"
+                                                                        type="checkbox" role="switch" id="">
+                                                                </div>
+                                                            </td>
+                                                            <td
+                                                                class="d-flex justify-content-center gap-2 align-items-center">
+                                                                <a href="./editItem.html">
+                                                                    <img src="./assets/images/icons/pen-to-square-solid.svg"
+                                                                        style="width: 18px;" class="editUserIcon"
+                                                                        alt="">
+                                                                </a>
+                                                                <img src="./assets/images/icons/trash-solid.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="defaultCheck6">
+                                                                <img src="./assets/images/dining-menu.png"
+                                                                    style="width: 25px;" alt="">
+                                                                Fool's Gold Loaf
+                                                            </th>
+                                                            <td>
+                                                                <img src="./assets/images/icons/veg-icon.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                            <td>$ 29</td>
+                                                            <td>4</td>
+                                                            <td>
+                                                                <div class="form-check form-switch">
+                                                                    <input
+                                                                        class="form-check-input flexSwitchCheckDefault"
+                                                                        type="checkbox" role="switch" id="">
+                                                                </div>
+                                                            </td>
+                                                            <td
+                                                                class="d-flex justify-content-center gap-2 align-items-center">
+                                                                <a href="./editItem.html">
+                                                                    <img src="./assets/images/icons/pen-to-square-solid.svg"
+                                                                        style="width: 18px;" class="editUserIcon"
+                                                                        alt="">
+                                                                </a>
+                                                                <img src="./assets/images/icons/trash-solid.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-pasta" role="tabpanel"
+                                                aria-labelledby="pills-pasta-tab" tabindex="0">
+                                                <table id="myTable" class="table">
+                                                    <thead class="text-center ">
+                                                        <tr>
+                                                            <th scope="col"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="defaultCheck1">
+                                                                Name
+                                                            </th>
+                                                            <th scope="col">Item Type</th>
+                                                            <th scope="col">Rate</th>
+                                                            <th scope="col">Quantity</th>
+                                                            <th scope="col">Available</th>
+                                                            <th scope="col">Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="text-center">
+                                                        <tr>
+                                                            <th scope="row"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="pasta1">
+                                                                <img src="./assets/images/dining-menu.png"
+                                                                    style="width: 25px;" alt="">
+                                                                Spaghetti Carbonara
+                                                            </th>
+                                                            <td>
+                                                                <img src="./assets/images/icons/non-veg-icon.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                            <td>$ 22</td>
+                                                            <td>18</td>
+                                                            <td>
+                                                                <div class="form-check form-switch">
+                                                                    <input
+                                                                        class="form-check-input flexSwitchCheckDefault"
+                                                                        type="checkbox" role="switch" id="">
+                                                                </div>
+                                                            </td>
+                                                            <td
+                                                                class="d-flex justify-content-center gap-2 align-items-center">
+                                                                <a href="./editItem.html">
+                                                                    <img src="./assets/images/icons/pen-to-square-solid.svg"
+                                                                        style="width: 18px;" class="editUserIcon"
+                                                                        alt="">
+                                                                </a>
+                                                                <img src="./assets/images/icons/trash-solid.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="pasta2">
+                                                                <img src="./assets/images/dining-menu.png"
+                                                                    style="width: 25px;" alt="">
+                                                                Penne Arrabbiata
+                                                            </th>
+                                                            <td>
+                                                                <img src="./assets/images/icons/veg-icon.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                            <td>$ 18</td>
+                                                            <td>12</td>
+                                                            <td>
+                                                                <div class="form-check form-switch">
+                                                                    <input
+                                                                        class="form-check-input flexSwitchCheckDefault"
+                                                                        type="checkbox" role="switch" id="">
+                                                                </div>
+                                                            </td>
+                                                            <td
+                                                                class="d-flex justify-content-center gap-2 align-items-center">
+                                                                <a href="./editItem.html">
+                                                                    <img src="./assets/images/icons/pen-to-square-solid.svg"
+                                                                        style="width: 18px;" class="editUserIcon"
+                                                                        alt="">
+                                                                </a>
+                                                                <img src="./assets/images/icons/trash-solid.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-salad" role="tabpanel"
+                                                aria-labelledby="pills-salad-tab" tabindex="0">
+                                                <table id="myTable" class="table">
+                                                    <thead class="text-center ">
+                                                        <tr>
+                                                            <th scope="col"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="defaultCheck1">
+                                                                Name
+                                                            </th>
+                                                            <th scope="col">Item Type</th>
+                                                            <th scope="col">Rate</th>
+                                                            <th scope="col">Quantity</th>
+                                                            <th scope="col">Available</th>
+                                                            <th scope="col">Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="text-center">
+                                                        <tr>
+                                                            <th scope="row"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="salad1">
+                                                                <img src="./assets/images/dining-menu.png"
+                                                                    style="width: 25px;" alt="">
+                                                                Caesar Salad
+                                                            </th>
+                                                            <td>
+                                                                <img src="./assets/images/icons/non-veg-icon.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                            <td>$ 12</td>
+                                                            <td>16</td>
+                                                            <td>
+                                                                <div class="form-check form-switch">
+                                                                    <input
+                                                                        class="form-check-input flexSwitchCheckDefault"
+                                                                        type="checkbox" role="switch" id="">
+                                                                </div>
+                                                            </td>
+                                                            <td
+                                                                class="d-flex justify-content-center gap-2 align-items-center">
+                                                                <a href="./editItem.html">
+                                                                    <img src="./assets/images/icons/pen-to-square-solid.svg"
+                                                                        style="width: 18px;" class="editUserIcon"
+                                                                        alt="">
+                                                                </a>
+                                                                <img src="./assets/images/icons/trash-solid.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="salad2">
+                                                                <img src="./assets/images/dining-menu.png"
+                                                                    style="width: 25px;" alt="">
+                                                                Greek Salad
+                                                            </th>
+                                                            <td>
+                                                                <img src="./assets/images/icons/veg-icon.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                            <td>$ 10</td>
+                                                            <td>14</td>
+                                                            <td>
+                                                                <div class="form-check form-switch">
+                                                                    <input
+                                                                        class="form-check-input flexSwitchCheckDefault"
+                                                                        type="checkbox" role="switch" id="">
+                                                                </div>
+                                                            </td>
+                                                            <td
+                                                                class="d-flex justify-content-center gap-2 align-items-center">
+                                                                <a href="./editItem.html">
+                                                                    <img src="./assets/images/icons/pen-to-square-solid.svg"
+                                                                        style="width: 18px;" class="editUserIcon"
+                                                                        alt="">
+                                                                </a>
+                                                                <img src="./assets/images/icons/trash-solid.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-pizza" role="tabpanel"
+                                                aria-labelledby="pills-pizza-tab" tabindex="0">
+                                                <table id="myTable" class="table">
+                                                    <thead class="text-center ">
+                                                        <tr>
+                                                            <th scope="col"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="defaultCheck1">
+                                                                Name
+                                                            </th>
+                                                            <th scope="col">Item Type</th>
+                                                            <th scope="col">Rate</th>
+                                                            <th scope="col">Quantity</th>
+                                                            <th scope="col">Available</th>
+                                                            <th scope="col">Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="text-center">
+                                                        <tr>
+                                                            <th scope="row"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="pizza1">
+                                                                <img src="./assets/images/dining-menu.png"
+                                                                    style="width: 25px;" alt="">
+                                                                Margherita Pizza
+                                                            </th>
+                                                            <td>
+                                                                <img src="./assets/images/icons/veg-icon.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                            <td>$ 24</td>
+                                                            <td>20</td>
+                                                            <td>
+                                                                <div class="form-check form-switch">
+                                                                    <input
+                                                                        class="form-check-input flexSwitchCheckDefault"
+                                                                        type="checkbox" role="switch" id="">
+                                                                </div>
+                                                            </td>
+                                                            <td
+                                                                class="d-flex justify-content-center gap-2 align-items-center">
+                                                                <a href="./editItem.html">
+                                                                    <img src="./assets/images/icons/pen-to-square-solid.svg"
+                                                                        style="width: 18px;" class="editUserIcon"
+                                                                        alt="">
+                                                                </a>
+                                                                <img src="./assets/images/icons/trash-solid.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="pizza2">
+                                                                <img src="./assets/images/dining-menu.png"
+                                                                    style="width: 25px;" alt="">
+                                                                Pepperoni Pizza
+                                                            </th>
+                                                            <td>
+                                                                <img src="./assets/images/icons/non-veg-icon.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                            <td>$ 28</td>
+                                                            <td>15</td>
+                                                            <td>
+                                                                <div class="form-check form-switch">
+                                                                    <input
+                                                                        class="form-check-input flexSwitchCheckDefault"
+                                                                        type="checkbox" role="switch" id="">
+                                                                </div>
+                                                            </td>
+                                                            <td
+                                                                class="d-flex justify-content-center gap-2 align-items-center">
+                                                                <a href="./editItem.html">
+                                                                    <img src="./assets/images/icons/pen-to-square-solid.svg"
+                                                                        style="width: 18px;" class="editUserIcon"
+                                                                        alt="">
+                                                                </a>
+                                                                <img src="./assets/images/icons/trash-solid.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-dessert" role="tabpanel"
+                                                aria-labelledby="pills-dessert-tab" tabindex="0">
+                                                <table id="myTable" class="table">
+                                                    <thead class="text-center ">
+                                                        <tr>
+                                                            <th scope="col"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="defaultCheck1">
+                                                                Name
+                                                            </th>
+                                                            <th scope="col">Item Type</th>
+                                                            <th scope="col">Rate</th>
+                                                            <th scope="col">Quantity</th>
+                                                            <th scope="col">Available</th>
+                                                            <th scope="col">Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="text-center">
+                                                        <tr>
+                                                            <th scope="row"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="dessert1">
+                                                                <img src="./assets/images/dining-menu.png"
+                                                                    style="width: 25px;" alt="">
+                                                                Tiramisu
+                                                            </th>
+                                                            <td>
+                                                                <img src="./assets/images/icons/veg-icon.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                            <td>$ 12</td>
+                                                            <td>25</td>
+                                                            <td>
+                                                                <div class="form-check form-switch">
+                                                                    <input
+                                                                        class="form-check-input flexSwitchCheckDefault"
+                                                                        type="checkbox" role="switch" id="">
+                                                                </div>
+                                                            </td>
+                                                            <td
+                                                                class="d-flex justify-content-center gap-2 align-items-center">
+                                                                <a href="./editItem.html">
+                                                                    <img src="./assets/images/icons/pen-to-square-solid.svg"
+                                                                        style="width: 18px;" class="editUserIcon"
+                                                                        alt="">
+                                                                </a>
+                                                                <img src="./assets/images/icons/trash-solid.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="dessert2">
+                                                                <img src="./assets/images/dining-menu.png"
+                                                                    style="width: 25px;" alt="">
+                                                                Chocolate Lava Cake
+                                                            </th>
+                                                            <td>
+                                                                <img src="./assets/images/icons/veg-icon.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                            <td>$ 14</td>
+                                                            <td>22</td>
+                                                            <td>
+                                                                <div class="form-check form-switch">
+                                                                    <input
+                                                                        class="form-check-input flexSwitchCheckDefault"
+                                                                        type="checkbox" role="switch" id="">
+                                                                </div>
+                                                            </td>
+                                                            <td
+                                                                class="d-flex justify-content-center gap-2 align-items-center">
+                                                                <a href="./editItem.html">
+                                                                    <img src="./assets/images/icons/pen-to-square-solid.svg"
+                                                                        style="width: 18px;" class="editUserIcon"
+                                                                        alt="">
+                                                                </a>
+                                                                <img src="./assets/images/icons/trash-solid.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-burger" role="tabpanel"
+                                                aria-labelledby="pills-burger-tab" tabindex="0">
+                                                <table id="myTable" class="table">
+                                                    <thead class="text-center ">
+                                                        <tr>
+                                                            <th scope="col"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="defaultCheck1">
+                                                                Name
+                                                            </th>
+                                                            <th scope="col">Item Type</th>
+                                                            <th scope="col">Rate</th>
+                                                            <th scope="col">Quantity</th>
+                                                            <th scope="col">Available</th>
+                                                            <th scope="col">Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="text-center">
+                                                        <tr>
+                                                            <th scope="row"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="burger1">
+                                                                <img src="./assets/images/dining-menu.png"
+                                                                    style="width: 25px;" alt="">
+                                                                Classic Cheeseburger
+                                                            </th>
+                                                            <td>
+                                                                <img src="./assets/images/icons/non-veg-icon.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                            <td>$ 16</td>
+                                                            <td>30</td>
+                                                            <td>
+                                                                <div class="form-check form-switch">
+                                                                    <input
+                                                                        class="form-check-input flexSwitchCheckDefault"
+                                                                        type="checkbox" role="switch" id="">
+                                                                </div>
+                                                            </td>
+                                                            <td
+                                                                class="d-flex justify-content-center gap-2 align-items-center">
+                                                                <a href="./editItem.html">
+                                                                    <img src="./assets/images/icons/pen-to-square-solid.svg"
+                                                                        style="width: 18px;" class="editUserIcon"
+                                                                        alt="">
+                                                                </a>
+                                                                <img src="./assets/images/icons/trash-solid.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row"
+                                                                class="d-flex justify-content-start gap-2 align-items-center">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    style="border: 1px solid rgba(201, 201, 201, 0.609);"
+                                                                    id="burger2">
+                                                                <img src="./assets/images/dining-menu.png"
+                                                                    style="width: 25px;" alt="">
+                                                                Veggie Burger
+                                                            </th>
+                                                            <td>
+                                                                <img src="./assets/images/icons/veg-icon.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                            <td>$ 14</td>
+                                                            <td>28</td>
+                                                            <td>
+                                                                <div class="form-check form-switch">
+                                                                    <input
+                                                                        class="form-check-input flexSwitchCheckDefault"
+                                                                        type="checkbox" role="switch" id="">
+                                                                </div>
+                                                            </td>
+                                                            <td
+                                                                class="d-flex justify-content-center gap-2 align-items-center">
+                                                                <a href="./editItem.html">
+                                                                    <img src="./assets/images/icons/pen-to-square-solid.svg"
+                                                                        style="width: 18px;" class="editUserIcon"
+                                                                        alt="">
+                                                                </a>
+                                                                <img src="./assets/images/icons/trash-solid.svg"
+                                                                    style="width: 16px;" class="deleteUserIcon" alt="">
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content bg-white">
+                                <div class="modal-header border-bottom-0">
+                                    <h5 class="modal-title" id="logoutModalLabel">Add Category</h5>
+                                    <button type="button" class="btn-close h-50" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body pt-0 d-flex justify-content-start w-100">
+                                    <div class="row w-100">
+                                        <div class="col-12">
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="floatingInput1"
+                                                    placeholder="John" required>
+                                                <label for="floatingInput1">Name</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="floatingInput2"
+                                                    placeholder="JohnDoe077" required>
+                                                <label for="floatingInput2">Description</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer border-top-0 d-flex justify-content-end">
+                                    <a href="./menu.html" class="btn deleteBtn">Save</a>
+                                    <button type="button" class="btn cancelBtnModal"
+                                        data-bs-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="./assets/dist/js/dashboard.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const categoriesList = document.querySelector('.categories');
+                if (!categoriesList) return; // Guard clause if list doesn't exist
+
+                const categories = document.querySelectorAll('.nav-item.category');
+                if (!categories.length) return; // Guard clause if no categories found
+
+                let draggedItem = null;
+
+                categories.forEach(category => {
+                    // Safely get the handle element
+                    const handle = category.querySelector('.smallIcon');
+                    if (!handle) return; // Skip if no handle found
+
+                    // Make sure only the handle initiates drag
+                    handle.addEventListener('mousedown', () => {
+                        category.draggable = true;
+                    });
+
+                    category.addEventListener('mouseup', () => {
+                        category.draggable = false;
+                    });
+
+                    category.addEventListener('mouseleave', () => {
+                        category.draggable = false;
+                    });
+
+                    // Drag start event
+                    category.addEventListener('dragstart', function (e) {
+                        draggedItem = this;
+                        this.classList.add('dragging');
+                        e.dataTransfer.setData('text/plain', ''); // Required for Firefox
+                    });
+
+                    // Drag end event
+                    category.addEventListener('dragend', function () {
+                        this.classList.remove('dragging');
+                        draggedItem = null;
+                        categories.forEach(cat => {
+                            cat.style.borderTop = '';
+                            cat.style.borderBottom = '';
+                        });
+                        updatePositions();
+                    });
+
+                    // Drag over event
+                    category.addEventListener('dragover', function (e) {
+                        e.preventDefault();
+                        if (this === draggedItem) return;
+
+                        const mouseY = e.clientY;
+                        const rect = this.getBoundingClientRect();
+                        const midPoint = rect.top + (rect.height / 2);
+
+                        categories.forEach(cat => {
+                            cat.style.borderTop = '';
+                            cat.style.borderBottom = '';
+                        });
+
+                        if (mouseY < midPoint) {
+                            this.style.borderTop = '2px solid #2196F3';
+                        } else {
+                            this.style.borderBottom = '2px solid #2196F3';
+                        }
+                    });
+
+                    // Drop event
+                    category.addEventListener('drop', function (e) {
+                        e.preventDefault();
+                        if (this === draggedItem) return;
+
+                        const mouseY = e.clientY;
+                        const rect = this.getBoundingClientRect();
+                        const midPoint = rect.top + (rect.height / 2);
+
+                        if (draggedItem) {
+                            if (mouseY > midPoint) {
+                                this.parentNode.insertBefore(draggedItem, this.nextSibling);
+                            } else {
+                                this.parentNode.insertBefore(draggedItem, this);
+                            }
+                        }
+
+                        // Clear all borders
+                        categories.forEach(cat => {
+                            cat.style.borderTop = '';
+                            cat.style.borderBottom = '';
+                        });
+                    });
+                });
+
+                function updatePositions() {
+                    const updatedCategories = document.querySelectorAll('.nav-item.category');
+                    updatedCategories.forEach((category, index) => {
+                        category.dataset.position = index;
+                    });
+                }
+
+                // Add styles
+                const styleSheet = document.createElement('style');
+                styleSheet.textContent = `
+        .nav-item.category {
+            transition: background-color 0.2s ease;
+            cursor: default;
+        }
+        .nav-item.category.dragging {
+            opacity: 0.6;
+            background-color: #f8f9fa;
+        }
+        .nav-item.category .smallIcon {
+            cursor: move;
+            cursor: -webkit-grab;
+            cursor: grab;
+        }
+        .nav-item.category .smallIcon:active {
+            cursor: -webkit-grabbing;
+            cursor: grabbing;
+        }
+        .nav-item.category * {
+            pointer-events: none;
+        }
+        .nav-item.category .smallIcon {
+            pointer-events: all;
+        }
+    `;
+                document.head.appendChild(styleSheet);
+            });
+        </script>
+</body>
+
+</html>

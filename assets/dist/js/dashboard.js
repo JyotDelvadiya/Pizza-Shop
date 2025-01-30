@@ -30,7 +30,7 @@ function toggleMenu() {
     const sidebar = document.querySelector('.sidebar');
     const offcanvas = document.querySelector('.offcanvas');
     
-    if (window.innerWidth < 769) {
+    if (window.innerWidth < 991) {
         sidebar.classList.toggle('d-block');
         offcanvas.classList.toggle('show');
         // sidebar.style.display = sidebar.style.display === 'none' ? 'block' : 'none';
@@ -40,7 +40,7 @@ function toggleMenu() {
 function toggleMenuForBigScreen(){
     const offcanvas = document.querySelector('.offcanvas');
 
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 991) {
         offcanvas.classList.toggle('show');
     }
 }
