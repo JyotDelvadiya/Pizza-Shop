@@ -161,7 +161,7 @@
                                                     class="d-flex justify-content-center align-items-center flex-row gap-2">
                                                     <img src="./assets/images/icons/plus-solid.svg"
                                                         class="addCategoryBtn" style="height: 35px; width: 35px;" alt=""
-                                                        data-bs-toggle="modal" data-bs-target="#logoutModal">
+                                                        data-bs-toggle="modal" data-bs-target="#addCategoryModal">
                                                 </div>
                                             </div>
                                         </div>
@@ -251,7 +251,8 @@
                                                     <img src="./assets/images/icons/trash-solid.svg" class="dustbinIcon"
                                                         alt="">
                                                 </div>
-                                                <a href="./addItem.html" class="w-50 addUserBlock">
+                                                <a class="w-50 addUserBlock" data-bs-toggle="modal"
+                                                    data-bs-target="#addItemModal">
                                                     <div
                                                         class="d-flex flex-row justify-content-center align-items-center gap-2 addUser w-100 h-100">
                                                         <img src="./assets/images/icons/plus-solid.svg"
@@ -920,16 +921,49 @@
 
                                     </div>
                                 </div>
+                                <div class="modal fade" id="addItemModal" tabindex="-1"
+                                    aria-labelledby="addItemModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content bg-white">
+                                            <div class="modal-header border-bottom-0">
+                                                <h5 class="modal-title" id="addItemModalLabel">Add Item</h5>
+                                                <button type="button" class="btn-close h-50" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body pt-0 d-flex justify-content-start w-100">
+                                                <div class="row w-100">
+                                                    <div class="col-12">
+                                                        <div class="form-floating mb-3">
+                                                            <input type="text" class="form-control" id="floatingInput1"
+                                                                placeholder="John" required>
+                                                            <label for="floatingInput1">Name</label>
+                                                        </div>
+                                                        <div class="form-floating mb-3">
+                                                            <input type="text" class="form-control" id="floatingInput2"
+                                                                placeholder="JohnDoe077" required>
+                                                            <label for="floatingInput2">Description</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer border-top-0 d-flex justify-content-end">
+                                                <a href="./menu.html" class="btn deleteBtn">Save</a>
+                                                <button type="button" class="btn cancelBtnModal"
+                                                    data-bs-dismiss="modal">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel"
+                    <div class="modal fade" id="addCategoryModal" tabindex="-1" aria-labelledby="addCategoryModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content bg-white">
                                 <div class="modal-header border-bottom-0">
-                                    <h5 class="modal-title" id="logoutModalLabel">Add Category</h5>
+                                    <h5 class="modal-title" id="addCategoryModalLabel">Add Category</h5>
                                     <button type="button" class="btn-close h-50" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
