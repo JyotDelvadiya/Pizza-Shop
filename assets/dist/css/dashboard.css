@@ -5,14 +5,7 @@ body {
     max-width: 100%;
 }
 
-.sidebar {
-    height: 100vh;
-    background-color: white;
-    transition: transform 0.3s ease;
-    box-shadow: 1px 10px 20px rgba(128, 128, 128, 0.448);
-    width: 250px;
-    z-index: 999;
-}
+
 
 .header {
     padding-right: 1em;
@@ -142,6 +135,7 @@ body {
     padding: 1.25em 0em;
     width: 100%;
 }
+
 /* ROLE TABLE CSS END */
 
 .tableContainer td:nth-child(5) .c-table-status {
@@ -667,19 +661,17 @@ input[type="color"]:focus,
         min-width: 25% !important;
     }
 
-    .itemsSearchBar{
+    .itemsSearchBar {
         max-width: 50%;
         min-width: 15% !important;
         margin-left: 10px;
     }
 
-    .itemsDeleteBar{
+    .itemsDeleteBar {
         max-width: 50%;
         min-width: 15% !important;
         margin-left: 10px;
     }
-
-    input::placeholder {}
 
     .addUserBlock {
         max-width: 25% !important;
@@ -696,20 +688,28 @@ input[type="color"]:focus,
         overflow-x: auto;
         white-space: nowrap;
     }
-    .tableContainer th, td {
-        min-width: 120px; 
+
+    .tableContainer th,
+    td {
+        min-width: 120px;
     }
 }
 
 @media screen and (max-width: 991px) {
-    .sidebar {
+    /* .sidebar {
         display: none;
-    }
+    } */
 
     .toggle {
         display: block !important;
         border-color: none;
     }
+
+    .menuContainer{
+        z-index: 1 !important;
+    }
+
+    
 
     .toggle i {
         font-size: 2em;
@@ -736,4 +736,18 @@ input[type="color"]:focus,
         /* min-width: 100% !important; */
     }
 
+}
+
+@media screen and (min-width: 992px) {
+    .sidebar {
+        height: 100vh;
+        background-color: white;
+        transition: transform 0.3s ease;
+        box-shadow: 1px 10px 20px rgba(128, 128, 128, 0.448);
+        min-width: 250px;
+        z-index: 999;
+    }
+    .offcanvas button{
+        display: none;
+    }
 }

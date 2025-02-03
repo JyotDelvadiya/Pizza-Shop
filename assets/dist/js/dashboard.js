@@ -31,7 +31,7 @@ function toggleMenu() {
     const offcanvas = document.querySelector('.offcanvas');
     
     if (window.innerWidth < 991) {
-        sidebar.classList.toggle('d-block');
+        // sidebar.classList.toggle('d-block');
         offcanvas.classList.toggle('show');
         // sidebar.style.display = sidebar.style.display === 'none' ? 'block' : 'none';
     }
