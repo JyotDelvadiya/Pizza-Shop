@@ -5,19 +5,12 @@ body {
     max-width: 100%;
 }
 
-
-
 .header {
     padding-right: 1em;
     height: 6vh;
     background-color: #0066a7;
     box-shadow: 15px 5px 20px rgba(128, 128, 128, 0.448);
 }
-
-.userProfileImage {
-    height: 60%;
-}
-
 .toggle {
     display: none !important;
 }
@@ -44,7 +37,7 @@ body {
 }
 
 .dashboardContent {
-    background-color: rgba(233, 233, 233, 0.63);
+    /* background-color: rgba(233, 233, 233, 0.63); */
     height: 100vh;
 }
 
@@ -55,6 +48,10 @@ body {
 }
 
 /* USER LIST PAGE */
+
+.userProfileImage{
+    height: 60%;
+}
 
 .searchIcon {
     width: 40px;

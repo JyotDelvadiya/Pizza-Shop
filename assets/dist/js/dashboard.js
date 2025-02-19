@@ -41,6 +41,18 @@ function toggleMenuForBigScreen(){
     const offcanvas = document.querySelector('.offcanvas');
 
     if (window.innerWidth > 991) {
-        offcanvas.classList.toggle('show');
+        offcanvas.classList.add('show');
     }
 }
+
+
+window.addEventListener('resize', function(event){
+    const offcanvas = document.querySelector('.offcanvas');
+
+    if (window.innerWidth > 991) {
+        offcanvas.classList.add('show');
+    }
+    else{
+        offcanvas.classList.remove('show');
+    }
+  });
